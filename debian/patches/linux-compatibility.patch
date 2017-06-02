@@ -1,0 +1,46 @@
+Description: Add icon, desktopfile, and install target
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change
+ .
+ qmlplane (1.1.0-1) unstable; urgency=medium
+ .
+   * Initial release
+Author: JBBgameich <jbb.mail@gmx.de>
+
+--- /dev/null
++++ qmlplane-1.1.0/platform-specific/linux/qmlplane.desktop
+@@ -0,0 +1,12 @@
++[Desktop Entry]
++Type=Application
++Name=QML Plane
++Version=1.1.0
++GenericName=Game in which you have to steer a plane
++TryExec=qmlplane
++Exec=qmlplane
++Icon=qmlplane
++Terminal=false
++Categories=Qt;Game;
++
++Comment=Game in which you have to steer a plane
+--- qmlplane-1.1.0.orig/qmlplane.pro
++++ qmlplane-1.1.0/qmlplane.pro
+@@ -3,6 +3,19 @@ QT += core gui qml quick multimedia xml
+ TARGET = qmlplane
+ TEMPLATE = app
+ 
++linux {
++    target.path = /usr/bin
++    INSTALLS += target
++
++    desktopfile.path = /usr/share/applications
++    desktopfile.files = platform-specific/linux/$${TARGET}.desktop
++    INSTALLS += desktopfile
++
++    icon.path = /usr/share/icons/hicolor/192x192/apps
++    icon.files = platform-specific/linux/$${TARGET}.png
++    INSTALLS += icon
++}
++
+ CONFIG += mobility
+ MOBILITY =
+ 

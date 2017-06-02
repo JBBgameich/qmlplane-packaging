@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qmlplane
+Source: https://github.com/olegyadrov/qmlplane
+
+Files: *
+Copyright: <1014-2015> <Oleg Yadrov>
+License: apache
+ Distributed under the Apache Software License, Version 2.
+
+Files: debian/*
+Copyright: 2017 JBBgameich <jbb.mail@gmx.de
+License: WTFPL
