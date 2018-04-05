@@ -1,15 +1,14 @@
 Source: qmlplane
 Section: games
 Priority: optional
-Maintainer: JBBgameich <jbb.mail@gmx.de>
-Build-Depends: debhelper (>= 9),
+Maintainer: Jonah Brüchert <jbb.mail@gmx.de>
+Build-Depends: debhelper (>= 11),
                qt5-qmake,
-               qt5-default,
                qtbase5-dev,
                qtdeclarative5-dev,
                libqt5svg5-dev,
                qtmultimedia5-dev
-Standards-Version: 3.9.8
+Standards-Version: 4.1.3
 Homepage: https://github.com/olegyadrov/qmlplane
 Vcs-Git: https://github.com/jbbgameich/qmlplane-packaging.git
 Vcs-Browser: https://github.com/jbbgameich/qmlplane-packaging
@@ -17,14 +16,9 @@ Vcs-Browser: https://github.com/jbbgameich/qmlplane-packaging
 Package: qmlplane
 Architecture: any
 Depends: qml-box2d,
-         libqt5quick5,
-         libqt5qml5,
-         libqt5svg5,
-         libqt5core5a,
-         libqt5gui5,
-         libqt5multimedia5,
-         libqt5xml5,
          ${shlibs:Depends},
          ${misc:Depends},
-Description: A 2d game, in which you have to steer a plane through obstacles.
- The game is made using qml and qml-box2d. It's available for Android and ios too.
+Description: demo game built with Qt Quick 2 and qml-box2d
+ This demo game showcases the capabilities of Qt Quick 2
+ .
+ The graphics in the game are entirely vector, so it will look good on any device.

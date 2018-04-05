@@ -1,15 +1,4 @@
 #!/usr/bin/make -f
-# See debhelper(7) (uncomment to enable)
-# output every command that modifies files on the build system.
-#export DH_VERBOSE = 1
-
-
-export LDFLAGS += -Wl,--as-needed
 
 %:
 	dh $@
-
-override_dh_auto_configure:
-	qmake -makefile
-
-.PHONY: override_dh_auto_test
