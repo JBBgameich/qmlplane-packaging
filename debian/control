@@ -15,7 +15,7 @@ Vcs-Browser: https://github.com/jbbgameich/qmlplane-packaging
 
 Package: qmlplane
 Architecture: any
-Depends: qml-box2d,
+Depends: qml-module-box2d | qml-box2d,
          ${shlibs:Depends},
          ${misc:Depends},
 Description: demo game built with Qt Quick 2 and qml-box2d
